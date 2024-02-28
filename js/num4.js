@@ -1,11 +1,13 @@
 const timeEl = document.querySelector(".time");
-const btnEl = document.querySelector(".btn");
+// const btnEl = document.querySelector(".btn");
 
 
-const timer = Number.parseFloat(timeEl) * 1000;
 
-btnEl.addEventListener("click", ()=> {
+
+timeEl.addEventListener("input", () => {
+    const timer = timeEl.value * 1000;
     setTimeout(message, timer);
+   
 });
 
 function message() {
